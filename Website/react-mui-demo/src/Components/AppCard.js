@@ -1,6 +1,7 @@
 import { Grid, Paper, Typography, Box } from "@mui/material"
+import React from "react"
 import ERoller from '../IMGs/E_Roller.jpg';
-import {spacing} from '@mui/system'
+//import {spacing} from '@mui/system'
 
 const AppCard = () => {
     return(
