@@ -1,3 +1,41 @@
 .HomeCard{
     width: 600px;
 }
+
+.HeroContent{
+    position:absolute;
+    top: 20%;
+    width: 99%;
+}
+
+.Hedding{
+    padding: 20px;
+    color: #ffffff;
+    font-family: "Arial";
+    font-size: 70px;
+    
+}
+
+.ContentBox{
+    padding: 3px;
+    align-items: center;
+    background-color: rgba(137, 216, 150, 0.3);
+}
+
+.FirstSection{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.FirstSection h1{
+    font-size: 50px;
+    align-self: center;
+    color: #388e3c;
+    margin-bottom: 30px;
+}
+
+.FirstSection p{
+    align-self: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}

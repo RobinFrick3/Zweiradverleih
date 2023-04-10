@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export const Navigation = () => {
     
     const LinkItem = styled(Typography) (({theme}) => ({
-        fontSize: "17px",
+        fontSize: "15px",
         color: "#000",
         fontWeight: "bold",
         cursor: "pointer",
@@ -22,7 +22,7 @@ export const Navigation = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: theme.spacing(3),
+        gap: theme.spacing(5),
         [theme.breakpoints.down("md")]: {
             display: "none"
         }
@@ -42,7 +42,7 @@ export const Navigation = () => {
         display: "felx",
         cursor: "pointer",
         color: "#0000",
-        marginRight: theme.spacing(0.5),
+        marginRight: "80px",
 //        [theme.breakpoints.down("md")]: {
 //            display: "flex"
 //        }
@@ -61,9 +61,9 @@ export const Navigation = () => {
     const NavBar = styled(AppBar) (({theme}) => ({
         display: "flex",
         alignItems: "center",
-        height: "80px",
-        backgroundColor: "#0000",
-        justifyContent: "space-between",
+        justifyContent: "center",
+        height: "60px",
+        backgroundColor: "#ffff",
         boxShadow: "1px 2px 9px #0006",
         [theme.breakpoints.down("md")]: {
             padding: theme.spacing(0.5),
@@ -83,16 +83,16 @@ export const Navigation = () => {
         <>
         <NavBar>
             <NavContainer>
-                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "30px" }}>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "40px" }}>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
                         <IconButton color="success" sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}><MenuIcon /></IconButton>
                         <NavLogo src={Logo} alt="logo" />
                     </Box>
                     <LinkItemsBox>
-                        <Link to={"/"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">Start</LinkItem></Link>
-                        <Link to={"/SoFunktionierts"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">So funktioniert's</LinkItem></Link>
-                        <Link to={"/Preise"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">Preise</LinkItem></Link>
-                        <Link to={"/Fragen"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">Häufige Fragen</LinkItem></Link>
+                        <Link to={"/"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">HOME</LinkItem></Link>
+                        <Link to={"/SoFunktionierts"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">SO GEHT'S</LinkItem></Link>
+                        <Link to={"/Preise"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">PREISE</LinkItem></Link>
+                        <Link to={"/Fragen"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">HÄUFIGE FRAGEN</LinkItem></Link>
                     </LinkItemsBox>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "30px" }}>
