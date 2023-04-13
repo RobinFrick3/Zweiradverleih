@@ -1,8 +1,29 @@
+import React, {useRef} from 'react';
 import { Box, Button, Container, TextField, Typography } from "@mui/material";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
+//<Link to="/" style={{ textDecoration: 'none' }}></Link>
 
 export const LogIn = () => {
+    
+    const navigate = useNavigate();
+
+    function loginTry () {
+        const derName = UserName.current?.value;
+        const dasPassword = Password.current?.value;
+        axios.post('http://localhost:5000/validatePassword', {derName, dasPassword}).then(res => {
+            if(res.data.validation){
+                navigate('/');  
+            }
+            console.log(res);
+        })
+    }
+    
+    
+    const UserName = useRef<HTMLInputElement>();
+    const Password = useRef<HTMLInputElement>();
+
     return (
         <>
         <Container>
@@ -10,9 +31,9 @@ export const LogIn = () => {
                 <Typography variant="h1">
                     LogIn
                 </Typography>
-                <TextField color="success"/>
-                <TextField color="success"/>
-                <Button variant="contained" color="success"  component= {Link} to="/">Login</Button>
+                <TextField inputRef={UserName} color="success"/>
+                <TextField inputRef={Password} color="success"/>
+                <Button onClick={loginTry} variant="contained" color="success">Login</Button>
                 <Box display={"flex"} flexDirection={"row"} gap="4px">
                     <Typography variant="body2">
                         Keinen Account?
