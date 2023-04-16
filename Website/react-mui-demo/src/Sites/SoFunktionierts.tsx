@@ -1,10 +1,11 @@
+import Footer from "../Components/Footer";
 import NavLeiste from "../Components/NavLeiste";
 
-export const SoFunktionierts = () => {
+export const SoFunktionierts = ({loggedInUser}: any) => {
     return (
         <>
-            <NavLeiste />
-            <h1>So Funktioniert's</h1>
+            <NavLeiste loggedInUser={loggedInUser}/>
+            <Footer />
         </>
     )
 }

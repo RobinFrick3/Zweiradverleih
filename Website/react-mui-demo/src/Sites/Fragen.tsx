@@ -1,14 +1,14 @@
 import NavLeiste from "../Components/NavLeiste";
 import Test from "../Components/Test"
+import Footer from "../Components/Footer"
+import Testimonials from "../Components/Testimonials";
 
-export const Fragen = () => {
+export default function Fragen ({loggedInUser}: any) {
     return (
         <>
-            <NavLeiste />
-            <Test />
-            <h1>Fragen</h1>
+            <NavLeiste loggedInUser={loggedInUser}/>
+            <Testimonials />
+            <Footer />
         </>
     )
 }
-
-export default Fragen;

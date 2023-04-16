@@ -3,10 +3,11 @@ import { AppBar, Box, Button, Container, IconButton, styled, Toolbar, Typography
 import MenuIcon from "@mui/icons-material/Menu"
 import Logo from '../IMGs/Greenweels.png';
 import LoginIcon from "@mui/icons-material/Login"
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link } from 'react-router-dom';
 
-export const Navigation = () => {
-    
+export const Navigation = ({loggedInUser}: any) => {
+
     const LinkItem = styled(Typography) (({theme}) => ({
         fontSize: "15px",
         color: "#000",
@@ -95,10 +96,23 @@ export const Navigation = () => {
                         <Link to={"/Fragen"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">HÄUFIGE FRAGEN</LinkItem></Link>
                     </LinkItemsBox>
                 </Box>
-                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "30px" }}>
-                <Link to={"/LogIn"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">LogIn</LinkItem></Link>
-                    <Button variant="contained" color="success" startIcon={<LoginIcon />} component= {Link} to="/Register">Register</Button>
+                {loggedInUser!="" ? (
+                <Link to={"/LogIn"} style={{ textDecoration: 'none' }}>
+                    <Box display="flex" justifyContent="space-between" sx={{ border: "1px solid #DCDCE4",
+                    borderRadius: "100px", cursor: "pointer", gap:3, padding: "8px",}}>
+                    <AccountCircleIcon sx={{color:"#000000"}}/>
+                    <Typography color="#388e3c"fontWeight="bold" fontSize="15px" sx={{color:"#4CAF50"}}>
+                        {loggedInUser}
+                    </Typography>
                 </Box>
+                </Link>
+                
+                ) : (
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "30px" }}>
+                    <Link to={"/LogIn"} style={{ textDecoration: 'none' }}><LinkItem variant="body2">LogIn</LinkItem></Link>
+                        <Button variant="contained" color="success" startIcon={<LoginIcon />} component= {Link} to="/Register">Register</Button>
+                    </Box>
+                )}
             </NavContainer>
         </NavBar>
         </>   

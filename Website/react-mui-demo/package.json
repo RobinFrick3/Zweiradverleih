@@ -8,6 +8,11 @@
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.11",
     "@react-google-maps/api": "^2.18.1",
+    "@teleporthq/teleport-component-generator": "^0.27.2",
+    "@teleporthq/teleport-plugin-import-statements": "^0.27.2",
+    "@teleporthq/teleport-plugin-react-base-component": "^0.27.2",
+    "@teleporthq/teleport-plugin-react-styled-components": "^0.27.2",
+    "@teleporthq/teleport-postprocessor-prettier-js": "^0.27.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,8 +21,10 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "axios": "^1.3.4",
+    "bootstrap": "^5.2.3",
     "google-map-react": "^2.2.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.9",
@@ -49,6 +56,8 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.9.0"
+    "@types/styled-components": "^5.1.26",
+    "react-router-dom": "^6.9.0",
+    "style-dictionary": "^3.7.2"
   }
 }
